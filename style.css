@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&family=Rubik:wght@300;400;500;600&display=swap");
+
+/*
+Fonts:
+    - Poppins: 300, 400, 600, 700, 800
+    - Rubik: 300, 400, 500, 700
+*/
+
+:root {
+  --primary-color: #063abf;
+  --secondary-color: #794afa;
+  --secondary-dark-color: #453c5c;
+
+  --white-color: #fff;
+  --light-bg-color: #f2f3f5;
+  --light-text-color: #7c899a;
+  --border-color: #e5e8ec;
+  --dark-color: #0a021c;
+
+  --font-small: 13px;
+  --font-smaller: 11px;
+
+  --percent100: 100%;
+  --percent50: 50%;
+
+  --fw3: 300;
+  --fw5: 500;
+  --fw6: 600;
+  --fw7: 700;
+  --fw8: 800;
+
+  --trans-background-color: background-color 0.3s color 0.3s;
+  --trans-background: background-color 0.3s;
+  --trans-color: color 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--dark-color);
+  background-color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  list-style: none;
+}
+img {
+  max-width: var(--percent100);
+  vertical-align: middle;
+}
+
+strong {
+  font-weight: var(--fw8);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input::placeholder {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins";
+}
+
+h1 {
+  font-size: calc(1.2em+1vw);
+  font-weight: var(--fw8);
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: var(--fw7);
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: var(--fw6);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+svg {
+  width: 16px;
+  cursor: pointer;
+  color: var(--dark-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* contacts */
+
+.contacts_section {
+  background-color: var(--light-bg-color);
+}
+
+.contacts_section .contacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2em 0.5em;
+  font-size: var(--font-smaller);
+}
+
+.contacts :where(.cont, .soc, .call, .mail) {
+  display: flex;
+}
+
+.contacts :where(.mail, .call) {
+  margin: 0 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts .icon {
+  margin: 0 0.3em;
+}
+
+/* nav-seaction */
+
+.navbar_section {
+  /* background-color: rgb(142, 238, 206); */
+  border-bottom: 1px soli violet;
+  padding-bottom: 1em;
+}
+
+.navbar_section
+  :where(.navigation, .nav, .logo, .nav_list, .search_box, a, .search) {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_section .nav svg {
+  width: 50px;
+  padding: 0.2em;
+}
+
+.navbar_section .navigation {
+  justify-content: space-between;
+  column-gap: 1em;
+  font-size: 15px;
+  margin: 0 0.5em;
+}
+
+.navbar_section .navigation strong {
+  text-transform: uppercase;
+}
+
+.navbar_section .navigation .nav_list {
+  margin: 0 1em;
+  gap: 1em;
+}
+
+.navbar_section .navigation .nav_list .nav_item:hover {
+  opacity: 0.7;
+}
+
+
+.navbar_section .navigation :where(.search_box, .search_box svg){
+    color: rgb(0, 140, 0);
+    font-weight: var(--fw5);
+}
+
+.navbar_section .navigation .search_box .icon svg{
+    width: 22px;
+    margin-left: .5em ;
+}
+
+
+/* start hero section  */
+.hero_section .hero_one{
+    display: grid;
+    /* grid-template-columns: ; */
+
+}
+
