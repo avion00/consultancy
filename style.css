@@ -123,6 +123,7 @@ svg {
 
 .container {
   max-width: 1200px;
+  min-width: 290px;
   margin: 0 auto;
 }
 
@@ -156,9 +157,8 @@ svg {
 /* nav-seaction */
 
 .navbar_section {
-  /* background-color: rgb(142, 238, 206); */
   border-bottom: 1px soli violet;
-  padding-bottom: 1em;
+  border: 1px groove var(--border-color);
 }
 
 .navbar_section
@@ -192,22 +192,241 @@ svg {
   opacity: 0.7;
 }
 
-
-.navbar_section .navigation :where(.search_box, .search_box svg){
-    color: rgb(0, 140, 0);
-    font-weight: var(--fw5);
+.navbar_section .navigation :where(.search_box, .search_box svg) {
+  color: rgb(0, 140, 0);
+  font-weight: var(--fw5);
 }
 
-.navbar_section .navigation .search_box .icon svg{
-    width: 22px;
-    margin-left: .5em ;
+.navbar_section .navigation .search_box .icon svg {
+  width: 22px;
+  margin-left: 0.5em;
 }
-
 
 /* start hero section  */
-.hero_section .hero_one{
-    display: grid;
-    /* grid-template-columns: ; */
+.hero_section {
+  padding: 2em 0.5em;
+}
+
+.hs_2 {
+  padding: 0.5em;
+}
+
+.hero_one {
+  display: flex;
+  align-items: center;
+}
+
+.hero_two {
+  flex-direction: row-reverse;
+  column-gap: 3em;
+}
+
+.hero_two .contacts {
+  display: flex;
+  float: right;
+  justify-content: right;
+  text-align: right;
+}
+
+.hero_one .reference {
+  width: 90%;
+}
+
+.hero_one .content {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.hero_one .content .title {
+  font-size: 1.6em;
+  font-weight: var(--fw6);
+  text-transform: uppercase;
+  padding: 0.8em 0.2em;
+}
+.hero_one .content .para {
+  width: 80%;
+  padding: 1.5em 1em;
+}
+
+.hero_one .content .txt {
+  margin: 0.5em;
+  margin-left: 3em;
+}
+
+.hero_one .content :where(.para, .btn, .txt) {
+  font-size: var(--font-small);
+}
+
+.hero_one .content .btn {
+  width: fit-content;
+  padding: 0.7em 1em;
+  border: 0;
+  border-radius: 20px;
+  font-family: inherit;
+  font-weight: var(--fw5);
+  cursor: pointer;
+  margin: 0.2em 1em;
+  background-color: var(--border-color);
+  transition: 0.5s;
+}
+
+.hero_one .content .btn:hover {
+  background-color: var(--secondary-dark-color);
+  color: var(--white-color);
+}
+
+.hero_section .hero_tree {
+  font-size: var(--font-smaller);
+  padding: 1.5em 3em;
+  text-align: center;
+}
+
+/* ======= row scroll ============== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========= footer section ============== */
+.footer_section{
+  background-color: #322947;
+  padding: 0 1em;
+}
+.footer_section .wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--white-color);
+  padding: 5em 0;
+  font-size: var(--font-small);
+  column-gap: .5em;
+  justify-content: space-around;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 1em;
+}
+
+.footer_section .wrapper :where(.help, .blog, .social_media, .advancing, .companies, li){
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8;
+}
+
+.footer_section .wrapper .col{
+  width: min-content;
+}
+
+.footer_section  .wrapper li a{
+  position: relative;
 
 }
 
+
+.footer_section  .wrapper li a::before{
+  content: '';
+  position: absolute;
+  bottom: .1em;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--white-color);
+  transition: all .5s;
+}
+
+.footer_section  .wrapper li a:hover::before{
+  width: 100%;
+}
+
+.footer_section  .wrapper li a:hover{
+  opacity: .6;
+}
+
+
+
+
+
+.footer_section  .wrapper .text{
+  margin-bottom: 1.2em;
+}
+
+
+.footer_section  .wrapper .col{
+  width: 15%;
+}
+
+.footer_section .wrapper.policy ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: space-around;
+}
+
+
+
+
+
+@media screen and (max-width: 692px) {
+  .contacts_section .contacts .text {
+    display: none;
+  }
+
+  .navbar_section .nav_list {
+    display: none;
+  }
+
+  .hero_one {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero_one .reference {
+    padding: 0 2em;
+  }
+
+  .hero_one .content .btn {
+    margin: 0.2em 2em;
+  }
+
+  .hero_one .content {
+    display: flex;
+    padding: 0 1em;
+  }
+
+  .hero_one .content .title {
+    text-align: center;
+    padding: 0.5em 0;
+  }
+  .hero_one .content .para {
+    padding: 0 2em;
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+  .footer_section .wrapper .col{
+    width: 45%;
+    margin: 1em .5em;
+  }
+}
+
+@media screen and (max-width: 352px){
+  .footer_section .wrapper .col{
+    width: 70%;
+  }
+}
