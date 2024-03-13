@@ -282,105 +282,211 @@ svg {
   text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
 /* ======= row scroll ============== */
+.row_scroll{
+  background-color: #d9deea;
+  padding: 1em 0;
+}
+.row_scroll .wrapper {
+  padding: 0 1em;
+  margin-bottom: 2em;
+  font-size: var(--font-small);
+}
+
+.row_scroll .wrapper .text h1 {
+  margin: 0.7em 0;
+}
+
+.row_scroll .wrapper .text {
+  margin: 2em 0;
+  text-align: center;
+  line-height: 2;
+}
+
+
+
+.swiper-slide swiper-slide-active{
+  margin: 0;
+}
+
+.image-content {
+  position: relative;
+  padding: 2em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.card-content{
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--white-color);
+  border-radius: 0 0 25px 25px;
+}
+
+.card-content .name{
+  font-size: 2em;
+  padding: 0 1em;
+}
+
+.card-content .discription{
+  padding: 1em 1.5em;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #8b8c8ed3;
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: -40px;
+  width: 40px;
+  height: 40px;
+  background-color: #8b8c8ed3;
+}
+
+.card{
+  background-color: white;
+  border-radius: 25px;
+}
+
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background: var(--white-color);
+}
+
+
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: var(--white-color);
+}
+
+.card-image .card-img {
+  border-radius: 50%;
+  border: 3px solid #dad7de;
+}
+
+
+.slider .swiper-slide {
+  min-width: 25%;
+  text-align: center;
+  height: 500px;
+  padding: 2.5em;
+}
+
+
+.swiper-button-prev{
+  margin: -.8em;
+}
+.swiper-button-next{
+  margin: -.8em;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ============================= */
 
 /* ========= footer section ============== */
-.footer_section{
+.footer_section {
   background-color: #322947;
   padding: 0 1em;
 }
-.footer_section .wrapper{
+.footer_section .wrapper {
   display: flex;
   flex-wrap: wrap;
   color: var(--white-color);
   padding: 5em 0;
   font-size: var(--font-small);
-  column-gap: .5em;
+  column-gap: 0.5em;
   justify-content: space-around;
   border-bottom: 2px solid var(--border-color);
   margin-bottom: 1em;
 }
 
-.footer_section .wrapper :where(.help, .blog, .social_media, .advancing, .companies, li){
+.footer_section
+  .wrapper
+  :where(.help, .blog, .social_media, .advancing, .companies, li) {
   display: flex;
   flex-direction: column;
   line-height: 1.8;
 }
 
-.footer_section .wrapper .col{
+.footer_section .wrapper .col {
   width: min-content;
 }
 
-.footer_section  .wrapper li a{
+.footer_section .wrapper li a {
   position: relative;
-
 }
 
-
-.footer_section  .wrapper li a::before{
-  content: '';
+.footer_section .wrapper li a::before {
+  content: "";
   position: absolute;
-  bottom: .1em;
+  bottom: 0.1em;
   left: 0;
   width: 0%;
   height: 1px;
   background-color: var(--white-color);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.footer_section  .wrapper li a:hover::before{
+.footer_section .wrapper li a:hover::before {
   width: 100%;
 }
 
-.footer_section  .wrapper li a:hover{
-  opacity: .6;
+.footer_section .wrapper li a:hover {
+  opacity: 0.6;
 }
 
-
-
-
-
-.footer_section  .wrapper .text{
+.footer_section .wrapper .text {
   margin-bottom: 1.2em;
 }
 
-
-.footer_section  .wrapper .col{
+.footer_section .wrapper .col {
   width: 15%;
 }
 
-.footer_section .wrapper.policy ul{
+.footer_section .wrapper.policy ul {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5em;
   justify-content: space-around;
 }
 
-
-
+@media screen and (max-width: 961px) {
+  .slider .swiper-slide {
+  min-width: 50%;
+  }
+}
 
 
 @media screen and (max-width: 692px) {
@@ -419,14 +525,19 @@ svg {
     width: 100%;
     margin-bottom: 1.5em;
   }
-  .footer_section .wrapper .col{
+  .footer_section .wrapper .col {
     width: 45%;
-    margin: 1em .5em;
+    margin: 1em 0.5em;
+  }
+  .slider .swiper-slide {
+  min-width: 100%;
   }
 }
 
-@media screen and (max-width: 352px){
-  .footer_section .wrapper .col{
+
+
+@media screen and (max-width: 352px) {
+  .footer_section .wrapper .col {
     width: 70%;
   }
 }
