@@ -131,6 +131,10 @@ svg {
   margin: 0 auto;
 }
 
+.contacts_section, .navbar_section, .parallex, .start_form, .hero_section, .success_calculation, .row_scroll, .footer_section{
+  min-width: 290px;
+}
+
 /* contacts */
 
 .contacts_section {
@@ -159,7 +163,6 @@ svg {
 }
 
 /* nav-seaction */
-
 .navbar_section {
   border-bottom: 1px soli violet;
   border: 1px groove var(--border-color);
@@ -209,7 +212,7 @@ svg {
 /* parallax section */
 
 .parallex {
-  margin-top: 2em;
+  /* margin-top: 2em; */
   height: 70dvh;
   background: url(img/parallax.jpg);
   background-size: cover;
@@ -220,7 +223,7 @@ svg {
 .parax .text {
   color: var(--white-color);
   display: flex;
-  height: 70vh;
+  height: 70dvh;
   align-items: center;
   padding: 6em;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -243,6 +246,172 @@ svg {
   color: var(--white-color);
   background-color: rgba(129, 109, 109, 0.546);
   backdrop-filter: blur(1px);
+}
+
+/* =====  start defination and form section =========== */
+.start_form {
+  background-color: whitesmoke;
+}
+
+.start_form .form_content {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em 0;
+  border-radius: 15px;
+  margin: 3em 0;
+}
+
+.start_form .form_content h1 {
+  font-size: 20px;
+  font-weight: var(--fw7);
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.start_form .form_content .para {
+  font-size: var(--font-smaller);
+}
+
+.start_form .form_content .form-container {
+  width: 100%;
+  padding: 1em;
+}
+
+.start_form .form_content form {
+  /* border: 1px solid; */
+  width: 100%;
+  margin-top: 1em;
+}
+.start_form .form_content form .form-group {
+  /* border: 1px solid green; */
+  padding: 1em;
+}
+
+.start_form .form_content form .form-group :where(input, textarea, button) {
+  width: 100%;
+  padding: 1em 2em;
+  font-family: inherit;
+}
+
+.start_form .content {
+  width: 30%;
+}
+
+.start_form .form-group input,
+textarea,
+.select-menu,
+button {
+  border: none;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.start_form .form-group input:focus,
+.start_form .form-group textarea:focus {
+  border: 1px solid rgb(8, 219, 47);
+  outline: none;
+}
+
+.start_form .form-group button {
+  background-color: var(--white-color);
+  transition: 0.5s;
+  opacity: 0.7;
+}
+.start_form .form-group button:hover {
+  background-color: rgb(139, 251, 139);
+  opacity: 1;
+}
+.start_form .form-group .msg {
+  padding: 0 1em;
+}
+.start_form .form-group {
+  position: relative;
+}
+
+.start_form .form-group:not(:nth-child(7), :nth-child(6)):after {
+  content: "*";
+  position: absolute;
+  top: 0;
+  left: 2em;
+  color: red;
+}
+
+/* resuable select */
+
+.select-menu {
+  position: relative;
+  padding: 0.7em 1.5em;
+  line-height: 2;
+}
+
+.select-menu .select-btn {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.select-menu .select-btn .options .option {
+  width: 100%;
+}
+
+.select-btn .icon {
+  font-size: 20px;
+  transition: 0.3s;
+  rotate: 90deg;
+}
+
+.select-menu.active .select-btn .icon {
+  transform: rotate(90deg);
+}
+
+.select-menu .options {
+  display: none;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  z-index: 2;
+  width: 92%;
+  padding: 1em;
+  border-radius: 0.6em;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.select-menu .options .option {
+  padding: 0.2em;
+}
+
+.select-menu .options .option a {
+  line-height: 2;
+  position: relative;
+  padding: 0.5em;
+}
+
+.select-menu.active .options {
+  display: block;
+}
+
+.select-menu .options .option a::before {
+  content: "";
+  position: absolute;
+  bottom: 0.1em;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--dark-color);
+  transition: all 0.5s;
+}
+
+.select-menu .options .option a:hover::before {
+  width: 100%;
+}
+
+.select-menu .options .option a:hover {
+  opacity: 0.6;
 }
 
 /* start hero section  */
@@ -332,8 +501,7 @@ svg {
   column-gap: 2em;
   border-bottom: 2px solid var(--border-color);
   align-items: center;
-  padding: 1em;
-  margin: 1em;
+  padding: 2.5em 1em;
   font-size: var(--font-small);
 }
 
@@ -356,7 +524,6 @@ svg {
   width: 50%;
 }
 
-
 .success_calculation .points .results {
   font-size: 16px;
   font-weight: var(--fw5);
@@ -372,13 +539,18 @@ svg {
 .success_calculation .points .results :where(.ass, .app, .clas) {
   width: 33.33%;
   padding: 1em;
-  opacity: .6;
-  transition: .5s;
+  opacity: 0.6;
+  text-transform: capitalize;
+  transition: 0.5s;
 }
-
 
 .success_calculation .points .results :where(.ass, .app, .clas):hover {
   opacity: 1;
+}
+
+.success_calculation .points .num {
+  font-size: 2em;
+  color: green;
 }
 /* ===== row scroll ============== */
 
@@ -404,6 +576,18 @@ svg {
 
 .swiper-slide swiper-slide-active {
   margin: 0;
+}
+
+.swiper-slide .button {
+  padding: 0.5em 2em;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+}
+
+.swiper-slide .button:hover {
+  color: #ac0823;
+  text-decoration: dotted;
 }
 
 .image-content {
@@ -568,7 +752,7 @@ svg {
   }
 }
 
-@media screen and (max-width: 692px) {
+@media screen and (max-width: 761px) {
   .contacts_section .contacts .text {
     display: none;
   }
@@ -634,10 +818,21 @@ svg {
     width: 100%;
     padding: 1em;
   }
+
+  .start_form .form_content {
+    width: 100%;
+  }
+
+  .start_form .success_one {
+    padding: 3em;
+  }
 }
 
 @media screen and (max-width: 352px) {
   .footer_section .wrapper .col {
     width: 70%;
+  }
+  .start_form .success_one {
+    padding: 1em;
   }
 }
