@@ -45,6 +45,10 @@ Fonts:
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   font-size: 16px;
@@ -202,6 +206,45 @@ svg {
   margin-left: 0.5em;
 }
 
+/* parallax section */
+
+.parallex {
+  margin-top: 2em;
+  height: 70dvh;
+  background: url(img/parallax.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.parax .text {
+  color: var(--white-color);
+  display: flex;
+  height: 70vh;
+  align-items: center;
+  padding: 6em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.parallex .btn {
+  margin: 1em 0;
+  padding: 0.5em 1.5em;
+  font-weight: var(--fw5);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-family: inherit;
+  background-color: var(--border-color);
+  transition: 0.4s;
+}
+
+.parallex .btn:hover {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--white-color);
+  background-color: rgba(129, 109, 109, 0.546);
+  backdrop-filter: blur(1px);
+}
+
 /* start hero section  */
 .hero_section {
   padding: 2em 0.5em;
@@ -282,17 +325,64 @@ svg {
   text-align: center;
 }
 
+/*  ============ SUCCESS =========== */
+
+.success_calculation .success_one {
+  display: flex;
+  column-gap: 2em;
+  border-bottom: 2px solid var(--border-color);
+  align-items: center;
+  padding: 1em;
+  margin: 1em;
+  font-size: var(--font-small);
+}
+
+.success_calculation .success_one .content {
+  width: 50%;
+}
+
+.success_calculation .success_one .content .title {
+  font-size: 2em;
+  font-weight: var(--fw6);
+  padding: 0.5em 1em;
+}
+
+.success_calculation .success_one .discription {
+  padding: 0em 5em;
+  font-size: smaller;
+}
+
+.success_calculation .success_one .reference {
+  width: 50%;
+}
 
 
+.success_calculation .points .results {
+  font-size: 16px;
+  font-weight: var(--fw5);
+  margin: 2em 1em;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+
+  cursor: pointer;
+  line-height: 2;
+}
+
+.success_calculation .points .results :where(.ass, .app, .clas) {
+  width: 33.33%;
+  padding: 1em;
+  opacity: .6;
+  transition: .5s;
+}
 
 
+.success_calculation .points .results :where(.ass, .app, .clas):hover {
+  opacity: 1;
+}
+/* ===== row scroll ============== */
 
-
-
-
-
-/* ======= row scroll ============== */
-.row_scroll{
+.row_scroll {
   background-color: #d9deea;
   padding: 1em 0;
 }
@@ -312,9 +402,7 @@ svg {
   line-height: 2;
 }
 
-
-
-.swiper-slide swiper-slide-active{
+.swiper-slide swiper-slide-active {
   margin: 0;
 }
 
@@ -327,8 +415,7 @@ svg {
   justify-content: center;
 }
 
-
-.card-content{
+.card-content {
   height: 220px;
   display: flex;
   flex-direction: column;
@@ -339,12 +426,12 @@ svg {
   border-radius: 0 0 25px 25px;
 }
 
-.card-content .name{
+.card-content .name {
   font-size: 2em;
   padding: 0 1em;
 }
 
-.card-content .discription{
+.card-content .discription {
   padding: 1em 1.5em;
 }
 
@@ -369,19 +456,17 @@ svg {
   background-color: #8b8c8ed3;
 }
 
-.card{
+.card {
   background-color: white;
   border-radius: 25px;
 }
-
 
 .overlay::after {
   border-radius: 0 25px 0 0;
   background: var(--white-color);
 }
 
-
-.card-image{
+.card-image {
   position: relative;
   height: 150px;
   width: 150px;
@@ -394,7 +479,6 @@ svg {
   border: 3px solid #dad7de;
 }
 
-
 .slider .swiper-slide {
   min-width: 25%;
   text-align: center;
@@ -402,16 +486,12 @@ svg {
   padding: 2.5em;
 }
 
-
-.swiper-button-prev{
-  margin: -.8em;
+.swiper-button-prev {
+  margin: -0.8em;
 }
-.swiper-button-next{
-  margin: -.8em;
+.swiper-button-next {
+  margin: -0.8em;
 }
-
-
-
 
 /* ============================= */
 
@@ -484,10 +564,9 @@ svg {
 
 @media screen and (max-width: 961px) {
   .slider .swiper-slide {
-  min-width: 50%;
+    min-width: 50%;
   }
 }
-
 
 @media screen and (max-width: 692px) {
   .contacts_section .contacts .text {
@@ -530,11 +609,32 @@ svg {
     margin: 1em 0.5em;
   }
   .slider .swiper-slide {
-  min-width: 100%;
+    min-width: 100%;
+  }
+  .success_calculation .success_one {
+    flex-direction: column;
+  }
+
+  .success_calculation .success_one .content {
+    width: 100%;
+  }
+
+  .success_calculation .success_one .reference {
+    width: 100%;
+  }
+
+  .success_calculation .points .results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .success_calculation .points .results :where(.ass, .app, .clas) {
+    width: 100%;
+    padding: 1em;
   }
 }
-
-
 
 @media screen and (max-width: 352px) {
   .footer_section .wrapper .col {
