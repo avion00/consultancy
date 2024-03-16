@@ -131,7 +131,14 @@ svg {
   margin: 0 auto;
 }
 
-.contacts_section, .navbar_section, .parallex, .start_form, .hero_section, .success_calculation, .row_scroll, .footer_section{
+.contacts_section,
+.navbar_section,
+.parallex,
+.start_form,
+.hero_section,
+.success_calculation,
+.row_scroll,
+.footer_section {
   min-width: 290px;
 }
 
@@ -193,6 +200,7 @@ svg {
 .navbar_section .navigation .nav_list {
   margin: 0 1em;
   gap: 1em;
+  font-size: var(--font-small);
 }
 
 .navbar_section .navigation .nav_list .nav_item:hover {
@@ -212,9 +220,8 @@ svg {
 /* parallax section */
 
 .parallex {
-  /* margin-top: 2em; */
   height: 70dvh;
-  background: url(img/parallax.jpg);
+  background: url(img/parallax.jpeg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -229,9 +236,32 @@ svg {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.parax .text .txt h1:first-child {
+  font-weight: var(--fw8);
+  color: rgb(217, 4, 47);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px var(--dark-color);
+  line-height: 1;
+  padding: 0.5em 0;
+}
+
+.parax .text .txt h1:not(:first-child) {
+  color: rgb(222, 4, 99);
+  font-weight: var(--fw6);
+  text-shadow: 1px 1px 5px var(--dark-color);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.parax .text .txt .para {
+  font-size: var(--font-small);
+  padding: 1em 0;
+  text-shadow: 2px 2px 10px var(--dark-color);
+}
+
 .parallex .btn {
   margin: 1em 0;
-  padding: 0.5em 1.5em;
+  padding: 0.6em 1.5em;
   font-weight: var(--fw5);
   border: 1px solid var(--border-color);
   border-radius: 20px;
@@ -329,6 +359,10 @@ button {
 }
 .start_form .form-group .msg {
   padding: 0 1em;
+}
+
+.start_form .success_one .title span {
+  color: rgb(222, 134, 3);
 }
 .start_form .form-group {
   position: relative;
@@ -441,10 +475,11 @@ button {
 }
 
 .hero_one .reference {
-  width: 90%;
+  width: 50%;
 }
 
 .hero_one .content {
+  width: 50%;
   display: flex;
   flex-direction: column;
   margin: 1em;
@@ -472,7 +507,7 @@ button {
 
 .hero_one .content .btn {
   width: fit-content;
-  padding: 0.7em 1em;
+  padding: 0.7em 2em;
   border: 0;
   border-radius: 20px;
   font-family: inherit;
@@ -498,10 +533,12 @@ button {
 
 .success_calculation .success_one {
   display: flex;
+  justify-content: center;
   column-gap: 2em;
+  text-align: center;
   border-bottom: 2px solid var(--border-color);
   align-items: center;
-  padding: 2.5em 1em;
+  padding: 6em 1em;
   font-size: var(--font-small);
 }
 
@@ -517,13 +554,18 @@ button {
 
 .success_calculation .success_one .discription {
   padding: 0em 5em;
-  font-size: smaller;
+  font-size: var(--font-small);
 }
 
 .success_calculation .success_one .reference {
   width: 50%;
+  font-size: 40px;
+  font-weight: var(--fw7);
+  color: rgb(238, 176, 4);
+  text-shadow: 1px 1px 3px rgb(107, 107, 2);
+  padding: 1em 0;
 }
-
+/* 
 .success_calculation .points .results {
   font-size: 16px;
   font-weight: var(--fw5);
@@ -551,7 +593,75 @@ button {
 .success_calculation .points .num {
   font-size: 2em;
   color: green;
+} */
+
+/* working process */
+
+.work .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4em;
 }
+
+.work .wrapper .wrap_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 3em;
+  cursor: pointer;
+  margin: 0 2em;
+
+}
+
+
+
+.work .wrapper .title h1 {
+  margin: 2em 0;
+  font-size: 30px;
+  font-weight: var(--fw7);
+  text-transform: capitalize;
+}
+
+.work .wrapper .wrap_box .box {
+  width: 47%;
+  padding: 2em 1em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px var(--secondary-dark-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform .3s;
+}
+
+.work .wrapper .wrap_box .box:hover{
+  transform: scale(1.05);
+}
+
+.work .wrapper .wrap_box .box .title {
+  display: flex;
+  padding: .5em 1em;
+  column-gap: .2em;
+}
+
+.work .wrapper .wrap_box .box .title .icon svg {
+  width: 30px;
+}
+
+.work .wrapper .wrap_box .box .title h2 {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  font-weight: var(--fw7);
+}
+
+.work .wrapper .wrap_box .box .discription{
+  padding: .2em 1em;
+  font-size: var(--font-small);
+}
+
 /* ===== row scroll ============== */
 
 .row_scroll {
@@ -746,6 +856,15 @@ button {
   justify-content: space-around;
 }
 
+.footer_section .wrapper.disclaimer ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 @media screen and (max-width: 961px) {
   .slider .swiper-slide {
     min-width: 50%;
@@ -807,7 +926,7 @@ button {
     width: 100%;
   }
 
-  .success_calculation .points .results {
+  /* .success_calculation .points .results {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -817,7 +936,7 @@ button {
   .success_calculation .points .results :where(.ass, .app, .clas) {
     width: 100%;
     padding: 1em;
-  }
+  } */
 
   .start_form .form_content {
     width: 100%;
@@ -825,6 +944,20 @@ button {
 
   .start_form .success_one {
     padding: 3em;
+  }
+
+  .hero_one .reference {
+    width: 100%;
+  }
+
+  .hero_one .content {
+    width: 100%;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .work .wrapper .wrap_box .box {
+    width: 100%;
   }
 }
 
