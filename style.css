@@ -314,12 +314,10 @@ svg {
 }
 
 .start_form .form_content form {
-  /* border: 1px solid; */
   width: 100%;
   margin-top: 1em;
 }
 .start_form .form_content form .form-group {
-  /* border: 1px solid green; */
   padding: 1em;
 }
 
@@ -420,6 +418,10 @@ button {
   padding: 0.2em;
 }
 
+.select-menu .options .option:not(:last-child) {
+  border-bottom: .5px solid var(--border-color);
+}
+
 .select-menu .options .option a {
   line-height: 2;
   position: relative;
@@ -454,7 +456,7 @@ button {
   padding: 2em 0.5em;
 }
 
-.hero_section .hero_tree{
+.hero_section .hero_tree {
   margin-top: 2em;
 }
 
@@ -655,10 +657,10 @@ button {
 .work .wrapper .wrap_box .box .title .icon svg {
   width: 30px;
   color: var(--dark-color);
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.work .wrapper .wrap_box .box:hover .title .icon svg{
+.work .wrapper .wrap_box .box:hover .title .icon svg {
   color: rgb(53, 196, 5);
 }
 
@@ -724,27 +726,21 @@ button {
   column-gap: 0.2em;
 }
 
-.type .wrapper .wrap_box .box .name{
+.type .wrapper .wrap_box .box .name {
   text-align: center;
 }
 
 .type .wrapper .wrap_box .box .title .icon svg {
   width: 30px;
   color: var(--dark-color);
-  transition: .2s;
+  transition: 0.2s;
 }
 
-.type .wrapper .wrap_box .box:hover .title .icon svg{
+.type .wrapper .wrap_box .box:hover .title .icon svg {
   color: rgb(255, 0, 0);
 }
 
-
 /*  more discription */
-
-
-
-
-
 
 /* ===== row scroll ============== */
 
@@ -1045,7 +1041,7 @@ button {
   }
 
   .type .wrapper .wrap_box .box {
-  width: 47%;
+    width: 47%;
   }
 }
 
