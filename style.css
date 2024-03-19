@@ -221,8 +221,8 @@ svg {
 /* parallax section */
 
 .parallex {
-  height: 70dvh;
-  background: url(img/parallax.jpeg);
+  height: 80dvh;
+  background: url(img/prallax.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -231,7 +231,7 @@ svg {
 .parax .text {
   color: var(--white-color);
   display: flex;
-  height: 70dvh;
+  height: 80dvh;
   align-items: center;
   padding: 6em;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -419,7 +419,7 @@ button {
 }
 
 .select-menu .options .option:not(:last-child) {
-  border-bottom: .5px solid var(--border-color);
+  border-bottom: 0.5px solid var(--border-color);
 }
 
 .select-menu .options .option a {
@@ -902,7 +902,7 @@ button {
   position: relative;
 }
 
-.footer_section .wrapper li a::before {
+.footer_section .wrapper.policy li a::before {
   content: "";
   position: absolute;
   bottom: 0.1em;
@@ -913,7 +913,7 @@ button {
   transition: all 0.5s;
 }
 
-.footer_section .wrapper li a:hover::before {
+.footer_section .wrapper.policy li a:hover::before {
   width: 100%;
 }
 
