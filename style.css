@@ -994,6 +994,9 @@ button {
   .slider .swiper-slide {
     min-width: 100%;
   }
+
+
+  
   .success_calculation .success_one {
     flex-direction: column;
   }
