@@ -18,3 +18,14 @@ you can download zsh in windows by following these steps:
 3. once installed, you can open a new terminal window and type `zsh` to start
 
 
+what is zsh?
+================
+zsh (z shell) is a Unix shell that is designed to be more powerful and flexible than
+bash. it is a command-line interface that allows users to interact with the operating system and execute commands
+zsh is known for its advanced features, such as:
+* syntax highlighting
+* command completion
+* customizable themes
+* advanced scripting capabilities
+
+
