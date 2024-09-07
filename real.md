@@ -29,3 +29,6 @@ zsh is known for its advanced features, such as:
 * advanced scripting capabilities
 
 
+ready to go
+
+
