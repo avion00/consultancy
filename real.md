@@ -115,4 +115,13 @@ it offers a range of features, including:
   * code analysis tools like sonarqube, codeclimate, etc. which can be integrated
   with ide's like vs code, intellij, etc. to provide real-time error detection and
   suggestions for improvement.
+
+
+  who are you?
+  =====================
+  i am a software developer with a passion for building scalable and efficient systems
+  i have experience with a range of technologies, including react, node.js, and next.js
+  i am excited to learn and grow as a developer, and to contribute to the development of new
+  technologies and projects.
+
   
