@@ -18,6 +18,7 @@ you can download zsh in windows by following these steps:
 3. once installed, you can open a new terminal window and type `zsh` to start
 
 
+
 what is zsh?
 ================
 zsh (z shell) is a Unix shell that is designed to be more powerful and flexible than
@@ -31,4 +32,9 @@ zsh is known for its advanced features, such as:
 
 ready to go
 
+
+how to clone youtube?
+==========================
+cloning youtube is a complex task that requires a deep understanding of the youtube platform and its underlying architecture
+it is not recommended to clone youtube without proper authorization and technical expertise
 

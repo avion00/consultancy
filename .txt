@@ -1,0 +1,5 @@
+# Import Oh My Posh
+Import-Module oh-my-posh
+
+# Set the theme (you can choose a theme from the list of available themes)
+Set-PoshPrompt -Theme <theme_name>
