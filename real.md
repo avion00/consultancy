@@ -47,3 +47,14 @@ wordpress has a vast array of plugins available, including:
 * contact form plugins (e.g. gravity forms, contact form 7)
 * e-commerce plugins (e.g. woocommerce, easy digital downloads)
 
+road map of next js?
+==========================
+next js is a popular react-based framework for building server-rendered and statically generated websites and applications
+it has a wide range of features and tools, including:
+* server-side rendering
+* static site generation
+* internationalization and localization
+* routing and navigation
+* api routes
+* getStaticProps
+
