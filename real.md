@@ -79,4 +79,14 @@ static site generation
  * internationalization and localization
 
  next js
+ ==========================
+ next js is a popular react-based framework for building server-rendered and statically generated websites and applications
+ it has a wide range of features and tools, including:
+ * server-side rendering
+ * static site generation
+ * internationalization and localization
+ * routing and navigation
+ * api routes
+ * getStaticProps
+
  
