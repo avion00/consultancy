@@ -38,3 +38,12 @@ how to clone youtube?
 cloning youtube is a complex task that requires a deep understanding of the youtube platform and its underlying architecture
 it is not recommended to clone youtube without proper authorization and technical expertise
 
+list out the plugin of wordpress?
+=====================================
+wordpress has a vast array of plugins available, including:
+* security plugins (e.g. wordfence, malware scanner)
+* performance plugins (e.g. w3 total cache, wp super cache)
+* seo plugins (e.g. yoast seo, all in one seo pack)
+* contact form plugins (e.g. gravity forms, contact form 7)
+* e-commerce plugins (e.g. woocommerce, easy digital downloads)
+
