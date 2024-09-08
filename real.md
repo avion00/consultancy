@@ -89,4 +89,9 @@ static site generation
  * api routes
  * getStaticProps
 
+ what is component-based architecture in react?
+ =====================================================
+ component-based architecture is a design pattern in which the user interface is composed of small, reusable pieces of 
+ code called components
+ each component represents a single piece of the user interface, such as a button or a form
  
