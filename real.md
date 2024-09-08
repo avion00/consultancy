@@ -58,3 +58,25 @@ it has a wide range of features and tools, including:
 * api routes
 * getStaticProps
 
+difference between react and next js
+=====================================
+react is a javascript library for building user interfaces
+next js is a framework that builds on top of react, adding features such as server-side rendering and
+static site generation
+ 
+
+ list out
+ the key features of react js
+ =====================================
+ react js has the following key features:
+ * component-based architecture
+ * virtual dom
+ * one-way data binding
+ * state and props
+ * hooks
+ * context api
+ * server-side rendering
+ * internationalization and localization
+
+ next js
+ 
