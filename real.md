@@ -94,4 +94,25 @@ static site generation
  component-based architecture is a design pattern in which the user interface is composed of small, reusable pieces of 
  code called components
  each component represents a single piece of the user interface, such as a button or a form
- 
+
+what is code pilot
+=====================
+code pilot is a platform that provides interactive coding lessons and exercises for developers
+it offers a range of features, including:
+* interactive coding lessons
+* personalized learning plans
+* real-time feedback and assessment
+* access to a community of developers and mentors
+
+  something linke error key extension which detect the error in run time code with good theme
+  ==============================================
+  there are several extensions available that can help detect errors in runtime code, such as:
+  * eslint
+  * jshint
+  * jslint
+  * codeclimate
+  * codefactor
+  * code analysis tools like sonarqube, codeclimate, etc. which can be integrated
+  with ide's like vs code, intellij, etc. to provide real-time error detection and
+  suggestions for improvement.
+  
