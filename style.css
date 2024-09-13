@@ -126,7 +126,7 @@ svg {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   min-width: 290px;
   margin: 0 auto;
 }
@@ -172,9 +172,15 @@ svg {
 
 /* nav-seaction */
 .navbar_section {
-  border-bottom: 1px soli violet;
-  border: 1px groove var(--border-color);
+  height: 100%;
+  width: 100%;
+  position: sticky;
+  top: -1px;
+  left: 0;
+  backdrop-filter: blur(8px);
+  z-index: 1000;
 }
+
 
 .navbar_section
   :where(.navigation, .nav, .logo, .nav_list, .search_box, a, .search) {
@@ -190,17 +196,39 @@ svg {
 .navbar_section .navigation {
   justify-content: space-between;
   column-gap: 1em;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0 0.5em;
+}
+
+.navbar_section .navigation .nav_list .nav_item a{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  column-gap: .1em;
+}
+
+.navbar_section .navigation .nav_list .nav_item a .icon img{
+  width: 13px;
+  height: 13px;
+}
+
+.navbar_section .navigation .nav .logo{
+  display: flex;
 }
 
 .navbar_section .navigation strong {
   text-transform: uppercase;
+  font-family: "poppins" sans-serif;
+}
+
+.navbar_section .navigation .icon img{
+  width: auto;
+  height:40px;
 }
 
 .navbar_section .navigation .nav_list {
-  margin: 0 1em;
-  gap: 1em;
+  margin: 0 1.5em;
+  gap: 0.5em 1.5em;
   font-size: var(--font-small);
 }
 
@@ -208,15 +236,43 @@ svg {
   opacity: 0.7;
 }
 
-.navbar_section .navigation :where(.search_box, .search_box svg) {
-  color: rgb(0, 140, 0);
-  font-weight: var(--fw5);
+.navbar_section .navigation .search_box form{
+  display: flex;
+  align-items: center;
+  width: 320px;
+  position: relative;
 }
 
-.navbar_section .navigation .search_box .icon svg {
-  width: 22px;
-  margin-left: 0.5em;
+.navbar_section .navigation .search_box .search_input{
+  all: unset;
+  width: 100%;
+  border: 1px solid rgba(166, 165, 165, 0.529);
+  padding: .6em 1.2em .6em 2.6em;
+  font-size: var(--font-small);
+  border-radius: 9px;
+  transition: .2s;
+  box-shadow: 3px 2px 15px rgba(213, 212, 212, 0.3) inset;
 }
+.navbar_section .navigation .search_box .search_input:focus{
+  border: 1px solid rgba(3, 142, 3, 0.656);
+}
+
+
+ .navbar_section .navigation .search_box form .icon{
+  
+  all: unset;
+  position: absolute;
+  top: 0;
+  left: .7em;
+  display: flex;
+  height: 100%;
+  align-items: center;
+ }
+
+
+
+
+
 
 /* parallax section */
 
@@ -947,13 +1003,12 @@ button {
   text-align: center;
 }
 
-@media screen and (max-width: 961px) {
+
+@media screen and (max-width: 967px) {
   .slider .swiper-slide {
     min-width: 50%;
   }
-}
 
-@media screen and (max-width: 761px) {
   .contacts_section .contacts .text {
     display: none;
   }
