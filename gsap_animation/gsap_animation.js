@@ -6,8 +6,8 @@ let mainText = document.querySelector(".mainText");
 document.addEventListener("mousemove", (e) => {
   let x = e.pageX;
   let y = e.pageY;
-  curs.style.left = x - 15 + "px";
-  curs.style.top = y - 15 + "px";
+  curs.style.left = x - 20 + "px";
+  curs.style.top = y - 110 + "px";
 });
 
 // show hide menu animation
@@ -47,7 +47,6 @@ menuItems.forEach((item, index) => {
   });
 });
 
-// Taken from https://codepen.io/enesser/pen/jdenE
 
 function main() {
   let scene = new THREE.Scene();

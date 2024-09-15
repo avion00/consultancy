@@ -5,20 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consultancy</title>
     <link rel="icon" href="img/sk.png" type="image/x-icon" />
-    <link rel="stylesheet" href="swiper/swiper-bundle.min.css"/>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js"></script>
-    <script defer src="gsap_animation.js"></script>
-    <link rel="stylesheet" href="gsap_animation.css">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js"
+    ></script>
+    <script defer src="gsap_animation/gsap_animation.js"></script>
+    <link rel="stylesheet" href="gsap_animation/gsap_animation.css" />
     <link rel="stylesheet" href="style.css" />
-
   </head>
   <body>
     <div id="page" class="site page-home">
       <!-- =========== contact section ========== -->
       <section class="contacts_section">
-        <div class="container">
+        <div class="container maxm_width">
           <div class="contacts">
             <div class="cont">
               <a href="#" class="mail">
@@ -116,49 +128,85 @@
 
       <!-- ================ navbar section ================ -->
       <section class="navbar_section">
-        <div class="container">
+        <div class="container maxm_width">
           <div class="navigation">
             <div class="nav">
               <a href="#" class="logo">
                 <div class="icon">
-                  <img src="img/sk.png" alt="skitesolutions">
-                 </div>
+                  <img src="img/sk.png" alt="skitesolutions" />
+                </div>
                 <strong>skitesolutions</strong>
                 <!-- -------------------logo in svg form--------------------->
-                 
-                
+
                 <!-- -------------------end of the logo in svg form ---------->
               </a>
               <div class="nav_list">
-                <div class="nav_item"><a href="#">
-                  <div class="icon">
-                    <img src="icon/cube.png" alt="">
-                  </div>
-                <span>Models</span></a></div>
-                <div class="nav_item"><a href="#"><div class="icon">
-                  <img src="icon/check.png" alt="">
-                </div><span>Tasks</span></a></div>
-                <div class="nav_item"><a href="#"><div class="icon">
-                  <img src="icon/geometry.png" alt="">
-                </div><span>Docs</span></a></div>
-                <div class="nav_item"><a href="#"><div class="icon">
-                  <img src="icon/blog.png" alt="">
-                </div><span>Post</span></a></div>
-                <div class="nav_item"><a href="#"><div class="icon">
-                  <img src="icon/contact.png" alt="">
-                </div><span>Contact</span></a></div>
-                <div class="nav_item"><a href="#"><div class="icon">
-                  <img src="icon/about.png" alt="">
-                </div><span>About</span></a></div>
-                <div class="nav_item"><a href="#"><div class="icon">
-                  <img src="icon/chat.png" alt="">
-                </div><span>FAQ</span></a></div>
+                <div class="nav_item">
+                  <a href="#">
+                    <div class="icon">
+                      <img src="icon/cube.png" alt="" />
+                    </div>
+                    <span>Models</span></a
+                  >
+                </div>
+                <div class="nav_item">
+                  <a href="#"
+                    ><div class="icon">
+                      <img src="icon/check.png" alt="" />
+                    </div>
+                    <span>Tasks</span></a
+                  >
+                </div>
+                <div class="nav_item">
+                  <a href="#"
+                    ><div class="icon">
+                      <img src="icon/geometry.png" alt="" />
+                    </div>
+                    <span>Docs</span></a
+                  >
+                </div>
+                <div class="nav_item">
+                  <a href="#"
+                    ><div class="icon">
+                      <img src="icon/blog.png" alt="" />
+                    </div>
+                    <span>Post</span></a
+                  >
+                </div>
+                <div class="nav_item">
+                  <a href="#"
+                    ><div class="icon">
+                      <img src="icon/contact.png" alt="" />
+                    </div>
+                    <span>Contact</span></a
+                  >
+                </div>
+                <div class="nav_item">
+                  <a href="#"
+                    ><div class="icon">
+                      <img src="icon/about.png" alt="" />
+                    </div>
+                    <span>About</span></a
+                  >
+                </div>
+                <div class="nav_item">
+                  <a href="#"
+                    ><div class="icon">
+                      <img src="icon/chat.png" alt="" />
+                    </div>
+                    <span>FAQ</span></a
+                  >
+                </div>
               </div>
             </div>
 
             <div class="search_box">
               <form href="#">
-                <input class="search_input" placeholder="Search blog, post, project ..." type="text">
+                <input
+                  class="search_input"
+                  placeholder="Search blog, post, project ..."
+                  type="text"
+                />
                 <button type="submit" class="icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -174,74 +222,54 @@
             </div>
             <div class="menu">
               <div class="icon">
-                <img src="icon/menu.png" alt="">
+                <img src="icon/menu.png" alt="" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
-
       <section class="gsap_animation">
         <div id="WebGL-output"></div>
         <div class="dots_star">
-          <div id="stars">
-          </div>
+          <div id="stars"></div>
         </div>
-          
-        <img class="planetImg" src="https://assets.codepen.io/1651485/planet.png" />
-        
+
+        <img
+          class="planetImg"
+          src="https://assets.codepen.io/1651485/planet.png"
+        />
+
         <div class="mainText">
-          <h3 class="mainTitle">
-            Some space technology title
-          </h3>
+          <h3 class="mainTitle">Transforming Ideas into Digital Reality</h3>
           <p class="subTitle">
-            This is some random text that will go initialy under the main title
+            Crafting innovative web, mobile, and AI-powered applications that
+            drive your business forward.
           </p>
           <div class="cursor"></div>
         </div>
       </section>
 
-      <!--  ================= parallex section ============== -->
-      <section class="parallex">
-        <div class="container">
-          <div class="wrapper">
-            <div class="parax">
-              <div class="text">
-                <div class="txt">
-                  <h1>Got Scammed?</h1>
-                  <h1>File a scam</h1>
-                  <h1>complaint today!</h1>
-                  <p class="para">
-                    We work to make sure you got the right service from the
-                    right fund recovery or lawyer in their field of expertise.
-                  </p>
-
-                  <button class="btn">ASK FOR CONSULTATION</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div class="transition-blur"></div>
 
       <!--  ================  start defination and form section ===========-->
       <section class="start_form success_calculation">
         <div class="container">
           <div class="success_one">
-            <div class="content item">
+            <div class="content item animate-on-scroll animate__animated animate__backInLeft">
               <div class="title">
-                <span>Get your money back</span> from a scam
+                <span>Services we </span>can help you with
               </div>
               <p class="discription">
-                If you’ve been ripped off by scammers, get in touch and our team
-                of experts will work to get your money back. 
+                We combine creativity, technology, and strategy to deliver
+                solutions that drive growth and innovation. From design to
+                development and beyond, our team is dedicated to providing
+                services that meet your unique needs and goals.
               </p>
             </div>
-            <div class="form_content">
-              <h1>Start here</h1>
-              <p class="para">Secure a free consultation</p>
+            <div class="form_content animate-on-scroll animate__animated animate__backInRight">
+              <h1>Get Start</h1>
+              <p class="para">Grow your Business with AI</p>
               <div class="form-container">
                 <form action="">
                   <div class="form-group">
@@ -286,7 +314,7 @@
                       <div class="select-menu">
                         <div class="select-btn">
                           <span class="sBtn-text"
-                            >How much did you invest?</span
+                            >What services do we offer?</span
                           >
                           <div class="icon">
                             <svg
@@ -304,40 +332,57 @@
                           <li class="option">
                             <a href="#"
                               ><span class="option-text"
-                                >Less than 5, 000</span
+                                >Custom website design and development</span
                               ></a
                             >
                           </li>
                           <li class="option">
                             <a href="#"
-                              ><span class="option-text">5,000-10,000 </span></a
-                            >
-                          </li>
-                          <li class="option">
-                            <a href="#"
                               ><span class="option-text"
-                                >10,000 - 20,000
+                                >E-commerce solutions
                               </span></a
                             >
                           </li>
                           <li class="option">
                             <a href="#"
                               ><span class="option-text"
-                                >21,000 - 50, 000
+                                >Content Management Systems (CMS) like
+                                WordPress, Joomla, and Drupal
                               </span></a
                             >
                           </li>
                           <li class="option">
                             <a href="#"
                               ><span class="option-text"
-                                >51,000 - 1,00,000
+                                >Website maintenance and support
                               </span></a
                             >
                           </li>
                           <li class="option">
                             <a href="#"
                               ><span class="option-text"
-                                >1,00,000 and Up</span
+                                >SEO and digital marketing
+                              </span></a
+                            >
+                          </li>
+                          <li class="option">
+                            <a href="#"
+                              ><span class="option-text">UI/UX design</span></a
+                            >
+                          </li>
+
+                          <li class="option">
+                            <a href="#"
+                              ><span class="option-text"
+                                >Mobile app development</span
+                              ></a
+                            >
+                          </li>
+
+                          <li class="option">
+                            <a href="#"
+                              ><span class="option-text"
+                                >Website hosting and domain management</span
                               ></a
                             >
                           </li>
@@ -350,7 +395,7 @@
                     <textarea
                       id="message"
                       name="message"
-                      placeholder="Outline Your Case"
+                      placeholder="Outline Your need..."
                       rows="4"
                       required
                     ></textarea>
@@ -365,34 +410,76 @@
         </div>
       </section>
 
+      <div class="transition-blur-get"></div>
+
       <!-- ============== hero section ================== -->
 
       <!-- hero 1 -->
       <section class="hero_section">
         <div class="container">
           <div class="hero_one">
-            <div class="content">
-              <div class="title">Why work with us?</div>
-              <p class="para">
-                The short answer: We only take on cases we believe can result in
-                a substantial recovery. Your time is as valuable as ours, and
-                that’s why we are completely transparent in our evaluation of
-                every case. If it can’t be done, we will tell you so. But, if we
-                feel there is a chance for full or partial recovery, then we'll
-                get to work right away.
-              </p>
-              <button type="submit" class="btn">About Us</button>
+            <div class="content animate-on-scroll animate__animated animate__backInLeft">
+              <h3 class="title">Why work with us?</h3>
+              <div class="para">
+                At <b>skitesolutions</b>, we believe that a great website is the
+                cornerstone of your online success. Here’s why partnering with
+                us will transform your digital presence and drive your business
+                forward:
+                <ul>
+                  <li class="para">
+                    <b> Expertise and Experience:</b> Our team of seasoned
+                    professionals brings years of experience and a deep
+                    understanding of web design and development. With a
+                    portfolio showcasing diverse projects across various
+                    industries, we have the expertise to tackle any challenge
+                    and deliver exceptional results.
+                  </li>
+                  <li class="para">
+                    <b>Tailored Solutions:</b> We don’t believe in
+                    one-size-fits-all. Every business is unique, and so are our
+                    solutions. We work closely with you to understand your
+                    specific needs and goals, crafting customized websites that
+                    align with your brand identity and drive engagement.
+                  </li>
+
+                  <li class="para">
+                    <b>Comprehensive Services: </b> From initial consultation to
+                    ongoing support, we offer a full suite of services. Whether
+                    you need a stunning website design, robust development, or
+                    strategic digital marketing, we’ve got you covered. Our
+                    all-in-one approach ensures consistency and efficiency
+                    throughout the project.
+                  </li>
+
+                  <li class="para">
+                    <b>Commitment to Quality:</b> Quality is at the heart of
+                    everything we do. We adhere to the highest standards of
+                    design and development, ensuring your website is not only
+                    visually appealing but also functional, secure, and
+                    optimized for performance. Our meticulous attention to
+                    detail guarantees a seamless user experience.
+                  </li>
+
+                  <li class="para">
+                    <b>Client-Centric Approach:</b> Your satisfaction is our
+                    priority. We maintain open and transparent communication
+                    throughout the project, keeping you informed and involved at
+                    every stage. Our responsive support team is always here to
+                    address any questions or concerns, providing peace of mind
+                    and reliability.
+                  </li>
+                </ul>
+              </div>
+              <!-- <button type="submit" class="btn">About Us</button> -->
             </div>
-            <div class="reference">
+            <div class="reference animate-on-scroll animate__animated animate__backInRight">
               <img src="img/hero_one.jpg" alt="" />
             </div>
           </div>
 
           <div class="hero_tree">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            nobis tenetur deserunt dolorum recusandae id ipsa itaque aperiam
-            modi nostrum temporibus alias ut neque exercitationem sequi
-            voluptate, a numquam molestias.
+            Feel free to adjust and personalize the content to better reflect
+            your agency’s specific strengths and values.
           </div>
         </div>
       </section>
@@ -402,14 +489,55 @@
         <div class="container">
           <div class="hero_one hero_two">
             <div class="content">
-              <div class="title">Your money back guarantee</div>
-              <p class="para">
-                The fund recovery process can be a lengthy one and requires
-                perseverance. Therefore it is vital that our clients are ready
-                for it and trust us every step of the way. So if for any reason
-                you are doubtful, you can ask for a full refund within the first
-                14 business days of the process.*
-              </p>
+              <div>
+                <ul>
+                  <li class="para">
+                    <b>Cutting-Edge Technology: </b>We leverage the latest
+                    technologies and tools to build modern, responsive websites
+                    that work flawlessly on all devices. Our commitment to
+                    staying ahead of industry trends means your website will
+                    feature the latest innovations and functionalities.
+                  </li>
+
+                  <li class="para">
+                    <b>Proven Results:</b> Our data-driven approach ensures that
+                    our strategies are grounded in real insights and lead to
+                    measurable results. We focus on delivering solutions that
+                    not only look great but also drive traffic, generate leads,
+                    and achieve your business objectives.
+                  </li>
+
+                  <li class="para">
+                    <b>Affordable Pricing:</b> We offer competitive pricing with
+                    no hidden fees, ensuring you get the best value for your
+                    investment. Our transparent quotes and flexible packages are
+                    designed to meet your needs without compromising on quality.
+                  </li>
+
+                  <li class="para">
+                    <b>Focus on Innovation:</b> Creativity and innovation are at
+                    the core of our work. We embrace new ideas and technologies
+                    to provide unique solutions that set you apart from the
+                    competition. Our continuous improvement mindset ensures that
+                    your website evolves with the digital landscape.
+                  </li>
+
+                  <li class="para">
+                    <b>Long-Term Partnerships:</b> We’re not just building
+                    websites; we’re building relationships. Our goal is to be
+                    your long-term partner in digital success. We offer ongoing
+                    support and maintenance to keep your website performing at
+                    its best and adapting to your evolving needs.
+                  </li>
+
+                  <li class="para">
+                    Ready to elevate your online presence? Partner with us and
+                    experience the difference. Contact [Your Agency Name] today
+                    to start your journey towards a powerful and impactful
+                    website.
+                  </li>
+                </ul>
+              </div>
 
               <button type="submit" class="btn">Read Terms & Conditions</button>
             </div>
@@ -432,12 +560,13 @@
           <div class="hero_one">
             <div class="content">
               <div class="title">Beware of copycats & imposters</div>
-              <p class="para">
+              <div class="para">
                 Scammers go as far as posing as legitimate scam recovery
-                companies and even present themselves as Consultancy Ltd. So it's
-                important to remember: a. Our emails end with @Consultancy.com.
-                b. We would NEVER ask you to send us money via Crypto.
-              </p>
+                companies and even present themselves as Consultancy Ltd. So
+                it's important to remember: a. Our emails end with
+                @Consultancy.com. b. We would NEVER ask you to send us money via
+                Crypto.
+              </div>
               <button type="submit" class="btn">Browse the full list</button>
             </div>
             <div class="reference">
@@ -454,18 +583,43 @@
         </div>
       </section>
 
+      <!--  ================= parallex section ============== -->
+      <section class="parallex">
+        <div class="container">
+          <div class="wrapper">
+            <div class="parax">
+              <div class="text">
+                <div class="txt">
+                  <h1>Got Scammed?</h1>
+                  <h1>File a scam</h1>
+                  <h1>complaint today!</h1>
+                  <div class="para">
+                    We work to make sure you got the right service from the
+                    right fund recovery or lawyer in their field of expertise.
+                  </div>
+
+                  <button class="btn">ASK FOR CONSULTATION</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="transition-blur-down"></div>
+
       <!-- hero 4 -->
       <section class="hero_section hs_2">
         <div class="container">
           <div class="hero_one hero_two">
             <div class="content">
-              <div class="title">Is your service provider a scam?</div>
-              <p class="para">
+              <h2 class="title">Is your service provider a scam?</h2>
+              <div class="para">
                 Use our Blacklist of known scams and frauds to check if one of
                 the service providers you are currently using is a scam/fraud.
                 At the moment, we list more than 11,000 companies that were
                 flagged as a scam/fraud by us and different regulatory bodies.
-              </p>
+              </div>
             </div>
             <div class="reference">
               <img src="img/hero4.jpg" alt="" />
@@ -478,7 +632,7 @@
             voluptate, a numquam molestias.
           </div>
         </div>
-      </s>
+      </section>
 
       <!-- ==================== success calculation ===============-->
       <section class="success_calculation">
@@ -486,13 +640,13 @@
           <div class="success_one">
             <div class="content item">
               <div class="title">Money retrieved in 2023</div>
-              <p class="discription">
+              <div class="discription">
                 Our team of experts secures refunds on a daily basis. We assist
                 businesses as well as individuals in their pursuit of funds lost
                 to scammers. Our goal is to continually improve in our endeavors
                 and we are always here to help you in your fight for what is
                 rightfully yours.
-              </p>
+              </div>
             </div>
             <div class="reference item">
               <span class="price">$5,000,459</span>
@@ -613,7 +767,6 @@
           </div>
         </div>
       </section>
-
 
       <!--  ============= type ========= -->
       <section class="type">
@@ -1064,8 +1217,8 @@
               </li>
               <li>
                 <a href="#"
-                  >At Consultancy we do not initiate calls without request. We only
-                  call clients that reached out to us.</a
+                  >At Consultancy we do not initiate calls without request. We
+                  only call clients that reached out to us.</a
                 >
               </li>
               <li>
@@ -1083,10 +1236,8 @@
           </div>
         </div>
       </section>
-
     </div>
     <script src="swiper/swiper-bundle.min.js"></script>
-    <script src="swipper_script.js"></script>
-    <script src="script.js"></script>
+    <script src="swiper/swipper_script.js"></script>
   </body>
 </html>
