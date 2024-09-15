@@ -147,6 +147,7 @@ svg {
 
 .contacts_section {
   background-color: var(--light-bg-color);
+  z-index: 100;
 }
 
 .contacts_section .contacts {
@@ -180,6 +181,8 @@ svg {
   backdrop-filter: blur(8px);
   z-index: 1000;
 }
+
+
 
 .navbar_section
   :where(.navigation, .nav, .logo, .nav_list, .search_box, a, .search) {

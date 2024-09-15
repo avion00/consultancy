@@ -1,0 +1,124 @@
+.gsap_animation {
+  background: radial-gradient(circle, #131111 0%, black 17%, black 27%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+.gsap_animation .cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(135, 134, 134, 0.489);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 2px -5px 50px 3px rgba(250, 250, 250, 0.82);
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+
+.gsap_animation .mainText {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gsap_animation .mainText .mainTitle {
+  text-transform: uppercase;
+  font-size: 54px;
+  position: relative;
+  letter-spacing: 7px;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  transition: all .3s ease-in-out;
+  opacity: 0.5;
+  user-select: none;
+}
+
+.gsap_animation .mainText .mainTitle:hover {
+  opacity: 1;
+  -webkit-text-fill-color: white;
+  text-fill-color: white;
+}
+
+.gsap_animation .mainText .mainTitle:hover ~ .cursor {
+  mix-blend-mode: difference;
+  background: white;
+}
+
+.gsap_animation .mainText .subTitle {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+}
+
+.gsap_animation .planetImg {
+  transform: scale(0.7) rotate(158deg);
+  position: absolute;
+  top: -5%;
+  right: 13%;
+  animation: float 12s ease-in-out infinite;
+  /* margin-top: 4em; */
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px) translatex(5px) scale(0.7) rotate(156deg);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px) translatex(-5px) scale(0.7) rotate(162deg);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px) translatex(5px) scale(0.7) rotate(156deg);
+  }
+}
+
+.gsap_animation .explosion {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 10ms;
+  transition-timing-function: ease-out;
+  animation: meniItemClick 0.3s;
+}
+
+@keyframes meniItemClick {
+  0% {
+    transform: scale(0.3);
+    box-shadow: 0 0 0px 0px #9ab3f5;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.7;
+    box-shadow: 0 0 10px 8px #9ab3f5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    box-shadow: 0 0 0px 0px #9ab3f5;
+  }
+}
+#WebGL-output {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.dg {
+  display: none;
+}
