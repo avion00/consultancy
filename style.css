@@ -151,7 +151,7 @@ svg {
 .start_form,
 .hero_section,
 .success_calculation,
-.row_scroll,
+.slides,
 .work,
 .footer_section {
   min-width: 290px;
@@ -854,25 +854,62 @@ button {
 
 /* ===== row scroll ============== */
 
-.row_scroll {
+.slides {
   background-color: #d9deea;
   padding: 1em 0;
 }
-.row_scroll .wrapper {
+.slides .wrapper {
   padding: 0 1em;
   margin-bottom: 2em;
   font-size: var(--font-small);
 }
 
-.row_scroll .wrapper .text h1 {
+.slides .wrapper .text h1 {
   margin: 0.7em 0;
 }
 
-.row_scroll .wrapper .text {
+.slides .wrapper .text {
   margin: 2em 0;
   text-align: center;
   line-height: 2;
 }
+
+
+
+
+
+
+.slider .swiper-slide{
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+  width: 30% !important;
+  min-width: 350px !important;
+
+  border: 1em solid red;
+
+ 
+}
+
+.swiper-button-next, .swiper-button-prev{
+/* all: unset; */
+}
+
+.swiper-button-next:after {
+position: absolute;
+top: 0;
+left: 0;
+}
+
+
+:root{
+  --swiper-navigation-size: var(--font-small);
+}
+
+
+
+
+
 
 .swiper-slide swiper-slide-active {
   margin: 0;
@@ -886,7 +923,7 @@ button {
 }
 
 .swiper-slide .button:hover {
-  color: #ac0823;
+  color: #c58590;
   text-decoration: dotted;
 }
 
