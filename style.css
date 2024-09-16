@@ -66,6 +66,8 @@ body {
   line-height: 1.4;
   color: var(--dark-color);
   background-color: var(--white-color);
+  background-color: #18181B;
+  color: var(--white-color);
 }
 
 a {
@@ -160,7 +162,7 @@ svg {
 /* contacts */
 
 .contacts_section {
-  background-color: var(--light-bg-color);
+  background-color: #27272A;
   z-index: 100;
 }
 
@@ -331,7 +333,7 @@ svg {
 
 .parallex {
   height: 80dvh;
-  background: url(img/prallax.jpg);
+  background: url("img/fav.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -390,7 +392,7 @@ svg {
 
 /* =====  start defination and form section =========== */
 .start_form {
-  background-color: whitesmoke;
+  background-color: #18181B;
 }
 
 .start_form .form_content {
@@ -444,10 +446,11 @@ svg {
 textarea,
 .select-menu,
 button) {
-  border: 1px solid white;
-  background-color: white;
+  border: 1px solid rgba(200, 200, 200, .3);
+  background-color: #27272A;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  color: var(--white-color);
 }
 
 .start_form .form-group input:focus,
@@ -457,16 +460,19 @@ button) {
 }
 
 .start_form .form-group > button {
-  background-color: var(--white-color);
+  /* background-color: var(--white-color); */
+  background-color: #27272A;
   transition: 0.5s;
   opacity: 0.7;
 }
 .start_form .form-group > button:hover {
   background-color: rgb(139, 251, 139);
   opacity: 1;
+  color: #18181B;
 }
 .start_form .form-group .msg {
   padding: 0 1em;
+  opacity: .5;
 }
 
 .start_form .success_one .title span {
@@ -479,7 +485,7 @@ button) {
 .start_form .form-group:not(:nth-child(7), :nth-child(6)):after {
   content: "*";
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 2em;
   color: red;
 }
@@ -517,20 +523,26 @@ button) {
   position: absolute;
   top: 50px;
   left: 0;
-  backdrop-filter: blur(2px);
-  z-index: 2;
+  backdrop-filter: blur(10px);
+  border: 1px solid #18181B;
+  z-index: 100;
   width: 100%;
   padding: 1em;
   border-radius: 0.6em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
 }
 
 .select-menu .options .option {
   padding: 0.2em;
+  transition: all .5s ease-out;
+}
+
+.select-menu .options .option:hover{
+  background-color: #3F3F46;
 }
 
 .select-menu .options .option:not(:last-child) {
-  border-bottom: 0.5px solid var(--border-color);
+    border-bottom: 1px solid rgba(200, 200, 200, .3);
 }
 
 .select-menu .options .option a {
@@ -855,8 +867,13 @@ button) {
 /* ===== row scroll ============== */
 
 .slides {
-  background-color: #d9deea;
+  background:url("img/walpaper.jpg");
+  background-size: cover;
+  background-attachment:fixed;
   padding: 5em 0;
+  color: var(--white-color);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1); 
+
 }
 .slides .wrapper {
   padding: 0 1em;
@@ -878,22 +895,17 @@ button) {
   padding: 1em !important;
   margin: 0 !important;
   height: auto !important;
-  min-width: 33.33% !important;
+  width: 33.33% !important;
   text-align: center;
 
 
 }
 
-.slider .swiper-slide {
-
-  /* height: 500px; */
-  /* padding: 2.5em; */
-}
 
 .swiper-button-next,
 .swiper-button-prev {
   background: transparent;
-  color: var(--dark-color);
+  color: var(--white-color);
   border-radius: 13px;
   float: inline-start;
   display: flex;
@@ -906,6 +918,9 @@ button) {
   width: 20px;
   height: 20px;
   transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(200, 200, 200, .4);
+
 }
 
 .swiper-button-next::after,
@@ -915,7 +930,6 @@ button) {
 
 .swiper-button-prev {
   margin: 10px 0px 10px 2px !important ;
-  border: 1px solid var(--border-color);
   box-shadow: 1px 1px 50px 2px rgba(0, 0, 0, 0.1);
   bottom: 0px !important;
   left: 0px !important;
@@ -923,7 +937,6 @@ button) {
 
 .swiper-button-next {
   margin: 10px 0px 10px 100px !important ;
-  border: 1px solid var(--border-color);
   box-shadow: 1px 1px 50px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -994,9 +1007,7 @@ button) {
 }
 
 .swiper-slide .btn:hover {
-  /* background-color: var(--secondary-dark-color); */
   background-color: var(--border-color);
-  /* color: var(--white-color); */
   color: black;
     text-decoration: underline;
 
@@ -1014,7 +1025,9 @@ button) {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color:#dad7de;
+  mix-blend-mode: difference;
+  background: transparent;
+
   border-radius: 25px 25px 0 25px;
 }
 
@@ -1026,17 +1039,22 @@ button) {
   bottom: -40px;
   width: 40px;
   height: 40px;
-  background-color: #dad7de;
+  background: transparent;
 }
 
 .card {
-  background-color: white;
+  background: transparent;
+  backdrop-filter: blur(4px);
   border-radius: 25px;
+  border: 1px solid rgba(200, 200, 200, .4);
+  color: var(--white-color);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 1); 
+  box-shadow: 3px 3px 55px 5px rgba(0, 0, 0, .1);
 }
 
 .overlay::after {
   border-radius: 0 25px 0 0;
-  background: var(--white-color);
+  background: transparent;
 }
 
 .card-image {
@@ -1252,7 +1270,11 @@ button) {
   }
 
   .swiper-button-next {
-    margin: 5px 0px 5px 25px !important ;
+    margin: 5px 0px 5px 55px !important ;
+  }
+
+    .swiper-button-prev {
+    margin: 5px 0px 5px 10px !important ;
   }
 }
 
