@@ -440,10 +440,10 @@ svg {
   width: 30%;
 }
 
-.start_form .form-group input,
+.start_form .form-group :where(input,
 textarea,
 .select-menu,
-button {
+button) {
   border: 1px solid white;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -456,12 +456,12 @@ button {
   outline: none;
 }
 
-.start_form .form-group button {
+.start_form .form-group > button {
   background-color: var(--white-color);
   transition: 0.5s;
   opacity: 0.7;
 }
-.start_form .form-group button:hover {
+.start_form .form-group > button:hover {
   background-color: rgb(139, 251, 139);
   opacity: 1;
 }
@@ -623,7 +623,7 @@ button {
   font-size: var(--font-small);
 }
 
-.hero_one .content .btn {
+.hero_one .content > .btn {
   width: fit-content;
   padding: 0.7em 2em;
   border: 0;
@@ -636,7 +636,7 @@ button {
   transition: 0.5s;
 }
 
-.hero_one .content .btn:hover {
+.hero_one .content > .btn:hover {
   background-color: var(--secondary-dark-color);
   color: var(--white-color);
 }
@@ -856,7 +856,7 @@ button {
 
 .slides {
   background-color: #d9deea;
-  padding: 1em 0;
+  padding: 5em 0;
 }
 .slides .wrapper {
   padding: 0 1em;
@@ -874,86 +874,138 @@ button {
   line-height: 2;
 }
 
-
-
-
-
-
-.slider .swiper-slide{
-  padding: 0 !important;
+.slider .swiper-slide {
+  padding: 1em !important;
   margin: 0 !important;
   height: auto !important;
-  width: 30% !important;
-  min-width: 350px !important;
+  min-width: 33.33% !important;
+  text-align: center;
 
-  border: 1em solid red;
 
- 
 }
 
-.swiper-button-next, .swiper-button-prev{
-/* all: unset; */
+.slider .swiper-slide {
+
+  /* height: 500px; */
+  /* padding: 2.5em; */
 }
 
-.swiper-button-next:after {
-position: absolute;
-top: 0;
-left: 0;
+.swiper-button-next,
+.swiper-button-prev {
+  background: transparent;
+  color: var(--dark-color);
+  border-radius: 13px;
+  float: inline-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1.2em;
+  rotate: 180deg;
+  z-index: 15;
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
-
-:root{
-  --swiper-navigation-size: var(--font-small);
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 9px;
 }
 
+.swiper-button-prev {
+  margin: 10px 0px 10px 2px !important ;
+  border: 1px solid var(--border-color);
+  box-shadow: 1px 1px 50px 2px rgba(0, 0, 0, 0.1);
+  bottom: 0px !important;
+  left: 0px !important;
+}
 
+.swiper-button-next {
+  margin: 10px 0px 10px 100px !important ;
+  border: 1px solid var(--border-color);
+  box-shadow: 1px 1px 50px 2px rgba(0, 0, 0, 0.1);
+}
 
+:where(.swiper-button-prev, .swiper-button-next):hover {
+  background: var(--secondary-dark-color);
+  color: var(--white-color);
+  box-shadow: 1px 1px 50px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--secondary-dark-color);
+}
 
+.slide-content.swiper.mySwiper {
+  position: relative !important;
+  margin: 3em 0 !important;
+}
 
+.card-wrapper.swiper-wrapper {
+  width: 100%;
+}
 
 .swiper-slide swiper-slide-active {
   margin: 0;
 }
 
-.swiper-slide .button {
-  padding: 0.5em 2em;
-  background: transparent;
-  border: none;
-  font-family: inherit;
-}
 
-.swiper-slide .button:hover {
-  color: #c58590;
-  text-decoration: dotted;
-}
 
 .image-content {
   position: relative;
-  padding: 2em;
+  padding: 1.5em;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .card-content {
-  height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 150px;
+  text-align: center;
   overflow: hidden;
-  background-color: var(--white-color);
+  background: transparent;
   border-radius: 0 0 25px 25px;
+  position: relative;
 }
 
 .card-content .name {
-  font-size: 2em;
-  padding: 0 1em;
+  font-size: 17px;
+  font-weight: var(--fw6);
+  text-transform: uppercase;
+  padding:.5em;
+  margin-top: .5em !important;
+}
+
+
+.swiper-slide .card-content > .btn{
+  padding: .5em 1.5em;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 21;
+  border-radius: 12px;
+  box-shadow: 1px 1px 15px 5px rgba(109, 109, 109, 0.1);
+  color: gray;
+  transition: all .3s ease-in-out;
+}
+
+.swiper-slide .btn:hover {
+  /* background-color: var(--secondary-dark-color); */
+  background-color: var(--border-color);
+  /* color: var(--white-color); */
+  color: black;
+    text-decoration: underline;
+
 }
 
 .card-content .discription {
-  padding: 1em 1.5em;
+  padding: 0 1em;
+  height: 57px;
+  overflow: hidden;
 }
 
 .overlay {
@@ -962,7 +1014,7 @@ left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #8b8c8ed3;
+  background-color:#dad7de;
   border-radius: 25px 25px 0 25px;
 }
 
@@ -974,7 +1026,7 @@ left: 0;
   bottom: -40px;
   width: 40px;
   height: 40px;
-  background-color: #8b8c8ed3;
+  background-color: #dad7de;
 }
 
 .card {
@@ -989,30 +1041,19 @@ left: 0;
 
 .card-image {
   position: relative;
-  height: 150px;
-  width: 150px;
+
   border-radius: 50%;
   background: var(--white-color);
 }
 
 .card-image .card-img {
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   border: 3px solid #dad7de;
+  object-fit: cover;
 }
 
-.slider .swiper-slide {
-  min-width: 25%;
-  text-align: center;
-  height: 500px;
-  padding: 2.5em;
-}
-
-.swiper-button-prev {
-  margin: -0.8em;
-}
-.swiper-button-next {
-  margin: -0.8em;
-}
 
 /* ============================= */
 
@@ -1150,9 +1191,8 @@ left: 0;
     width: 45%;
     margin: 1em 0.5em;
   }
-  .slider .swiper-slide {
-    min-width: 100%;
-  }
+
+
 
   .success_calculation .success_one {
     flex-direction: column;
@@ -1210,6 +1250,10 @@ left: 0;
   .navbar_section .navigation .search_box form {
     min-width: 100px;
   }
+
+  .swiper-button-next {
+    margin: 5px 0px 5px 25px !important ;
+  }
 }
 
 @media screen and (max-width: 352px) {
@@ -1224,3 +1268,16 @@ left: 0;
     width: 100%;
   }
 }
+
+
+@media  screen and (max-width: 1121px) {
+  .slider .swiper-slide {
+    min-width: 50%;
+  }
+}
+@media  screen and (max-width: 761px) {
+  .slider .swiper-slide {
+    min-width: 100%;
+  }
+}
+
