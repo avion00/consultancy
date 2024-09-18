@@ -72,9 +72,9 @@
   transform: scale(0.7) rotate(158deg);
   position: absolute;
   top: -5%;
-  right: 13%;
+  right: 10%;
+
   animation: float 12s ease-in-out infinite;
-  /* margin-top: 4em; */
 }
 
 @keyframes float {
@@ -122,6 +122,11 @@
   width: 100%;
   height: 100%;
   position: absolute;
+}
+
+#WebGL-output canvas{
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .dg {
